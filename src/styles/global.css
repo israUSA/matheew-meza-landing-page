@@ -6,6 +6,33 @@ html.dark {
   color: #fff;
 }
 
+
 .dark .nav-links a {
   color: #fff;
+}
+
+[data-theme="light"] {
+  --color-primary: #ec4899;    /* pink.500 */
+  --color-secondary: #6366f1;  /* indigo.500 */
+  --color-text: #111827;       /* gray.900 */
+  --color-text-offset: #4b5563; /* gray.600 */
+  --color-background: #f9fafb; /* gray.50 para light */
+  --color-background-offset: #e5e7eb; /* gray.100 */
+  --color-border: rgba(17, 24, 39, 0.1); /* gray.900 / 10% */
+}
+
+[data-theme="dark"] {
+  --color-primary: #f472b6;    /* pink.400 */
+  --color-secondary: #818cf8;  /* indigo.400 */
+  --color-text: #f9fafb;       /* gray.50 */
+  --color-text-offset: #9ca3af; /* gray.400 */
+  --color-background: #46B527; /* gray.900 para dark */
+  --color-background-offset: #1f2937; /* gray.800 */
+  --color-border: rgba(249, 250, 251, 0.1); /* gray.50 / 10% */
+}
+
+/* Aplica el background globalmente */
+:root {
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
