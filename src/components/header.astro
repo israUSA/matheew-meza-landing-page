@@ -9,13 +9,13 @@ const navItems: Array<NavItem> = [
 ];
 ---
 
-<header id="page-header" class=" w-full items-center justify-end px-3 py-8 text-white">
+<header id="page-header" class="sticky top-0 z-50 w-full bg-background/300  items-center justify-end px-3 py-4 text-white">
 
   <nav class="">
     <ul class="flex items-center gap-4 justify-end w-full ml-auto max-w-xs sm:max-w-none">
             {
         navItems.map(({ title, url }) => (
-          <li>
+          <li class="hover-underline">
            <a class="text-sm whitespace-nowrap sm:text-sm md:text-base" href={url}>
               {title}
             </a>
@@ -74,9 +74,40 @@ const navItems: Array<NavItem> = [
     @apply block;
   } */
   #page-header {
-    background: #0D0907;
+    /* background: #0D0907; */
     backdrop-filter: blur(10px);
   }
+
+  .hover-underline {
+  font-size: 2rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+:global(.dark) .hover-underline::after,
+:global(.dark) .hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #CCA848, #CCA848);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+  top: 5px;
+  transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
   
   #themeToggle {
     border: 0;
@@ -87,5 +118,18 @@ const navItems: Array<NavItem> = [
 
   :global(.dark) .sun { fill: transparent; }
   :global(.dark) .moon { fill: white; }
+
+   .hover-underline::after, .hover-underline::before {
+    content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+    background: linear-gradient(to right, #0D0907, #0D0907);
+    bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+  }
 
 </style>
