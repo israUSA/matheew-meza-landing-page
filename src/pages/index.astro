@@ -3,18 +3,21 @@ import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
 import Header from '@components/header.astro';
+import Introduction from '@components/introduction.astro'
 import AboutYou from '@components/about-you.astro';
 import Services from '@components/services.astro';
 import Testimonies from '@components/testimonies.astro';
 import Contact from '@components/contact.astro';
-
+import Footer from '@components/footer.astro'
 ---
-
+<!-- Header and footer are included by default. -->
 <Layout>
 	<Header/>
+	<Introduction/>
 	<AboutYou/>
 	<Services/>
 	<Testimonies/>
 	<Contact/>
-	<!-- <Welcome /> -->
+	<Footer/>
+	
 </Layout>
