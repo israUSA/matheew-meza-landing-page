@@ -11,7 +11,7 @@ html.light {
   color: #fff;
 }
 
-body:before, body:after {
+/* body:before, body:after {
 	content: "";
 	position: fixed;
 	width: 100%;
@@ -20,7 +20,7 @@ body:before, body:after {
 	opacity: 0.75;
   z-index: -1;
 	filter: blur(0px);
-}
+} */
 
 [data-theme="light"] {
   --color-primary: #ec4899;
@@ -39,7 +39,7 @@ body:before, body:after {
   --color-secondary: #818cf8;  
   --color-text: #f9fafb;
   --color-text-offset: #9ca3af; 
-  --color-background: #070d0b;
+  --color-background: #070C0F;
   --color-background-section: #1A1B21;
   --color-background-offset: #1f2937; 
   --color-border: rgba(249, 250, 251, 0.1);

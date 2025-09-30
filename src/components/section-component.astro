@@ -1,8 +1,18 @@
 ---
-const { id} = Astro.props;
+const { id } = Astro.props;
 ---
 
-<section id={id} class="section py-8 px-4 mx-4 md:px-16 bg-[var(--color-background-section)] text-[var(--color-text)]">
+<section
+  id={id}
+  class="gradient section py-8 px-4 sm:mx-4 md:mx-8 md:px-16 bg-[var(--color-background-section)] text-[var(--color-text)]"
+>
+  <slot />
+</section>
+
+<!-- <section id={id} class="section py-8 px-4 mx-4 md:px-16 bg-[var(--color-background-section)] text-[var(--color-text)]">
 <slot/>
 </section>
-  
+   -->
+
+<style>
+.gradient { background: linear-gradient(90deg, #282a3e4d 0%, #0f1019ff 100%); }

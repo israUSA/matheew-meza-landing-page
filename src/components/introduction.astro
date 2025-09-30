@@ -22,6 +22,15 @@ import photoWelcome from "../assets/welcome_trainer.png";
       </p>
       <p class="text-md md:text-2xl text-text max-w-2xl">¡Contáctame y empecemos tu viaje hoy!
       </p>
+      <!-- Botón al final -->
+      <div class="hidden md:flex mt-12">
+        <a
+          href="#contacto"
+          class="button inline-block bg-secondary px-6 py-3 rounded-lg hover:bg-opacity-90 transition"
+        >
+          Comienza ahora
+        </a>
+      </div>
     </div>
     <Image
       src={photoWelcome}
@@ -29,16 +38,14 @@ import photoWelcome from "../assets/welcome_trainer.png";
       alt="Descripción de la imagen"
     />
   </div>
-
-  <!-- Botón al final -->
-  <div class="flex justify-center mb-8">
-    <a
-      href="#contacto"
-      class="button inline-block bg-secondary px-6 py-3 rounded-lg hover:bg-opacity-90 transition"
-    >
-      Comienza ahora
-    </a>
-  </div>
+    <div class="flex justify-center mb-8 md:hidden">
+        <a
+          href="#contacto"
+          class="button inline-block bg-secondary px-6 py-3 rounded-lg hover:bg-opacity-90 transition"
+        >
+          Comienza ahora
+        </a>
+      </div>
 </section>
 
 
