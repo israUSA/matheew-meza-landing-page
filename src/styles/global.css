@@ -28,7 +28,8 @@ html.light {
   --color-text: #f9fafb;       
   --color-text-offset: #4b5563;
   --color-background: #CCA848;
-  --color-background-section: #BF9D3F;
+  --color-background-section-from: #D9B64C;
+  --color-background-section-to: #BF9D3F;
   --color-background-offset: #e5e7eb;
   --color-border: rgba(17, 24, 39, 0.1);
   --color-button: #070d0b;
@@ -40,7 +41,8 @@ html.light {
   --color-text: #f9fafb;
   --color-text-offset: #9ca3af; 
   --color-background: #070C0F;
-  --color-background-section: #1A1B21;
+  --color-background-section-from: #282a3e4d;
+  --color-background-section-to: #0f1019ff;
   --color-background-offset: #1f2937; 
   --color-border: rgba(249, 250, 251, 0.1);
   --color-button: #CCA848;

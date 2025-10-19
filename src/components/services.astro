@@ -1,11 +1,147 @@
-<section id="servicios">
-  <div class="flex flex-col bg-white rounded-lg shadow-md w-full m-6 overflow-hidden sm:w-52">
+---
+import { Image } from "astro:assets";
+import musculacionImage from "../assets/musculacion.webp";
+import crossfitImage from "../assets/crossfit.jpg";
+import bodybuilderImage from "../assets/bodybuilder.jpg";
+---
 
-                <img src="images/database-icon.svg" alt="" class="h-20 m-6">
+<section id="servicios" class="text-center px-4 py-16 md:mx-8">
+  <h1 class="text-2xl md:text-3xl font-bold text-primary mb-7">Servicios</h1>
+  <div class="flex flex-col gap-6 md:flex-row justify-between lg:text-left">
+    <div
+      class="card-container flex-grow cursor-pointer flex flex-col items-center min-w-[200px] max-w-[400px]"
+    >
+      <div class="card--flipper w-full aspect-[3/4]">
+        <div
+          class="flex flex-col side side--a bg-[var(--color-button)] overflow-hidden"
+        >
+          <Image
+            src={musculacionImage}
+            class="w-full h-full object-cover"
+            alt="Musculación"
+          />
+          <p
+            class="mt-2 text-center text-lg font-bold text-gray-800 dark:text-gray-100"
+          >
+            Musculación
+          </p>
+        </div>
+        <div
+          class="side side--b flex flex-col items-center justify-center bg-[var(--color-button)] text-white rounded-2xl"
+        >
+          <p
+            class="px-4 ext-2xl md:text-3xl text-text-offset leading-relaxed font-bold"
+          >
+            Desarrollo de fuerza y resistencia mediante cargas progresivas.
+            Ideal para tonificar, ganar masa muscular y mejorar la postura.
+          </p>
+        </div>
+      </div>
+    </div>
 
-                <h2 class="text-center px-2 pb-5">Database Support</h2>  
-                
-                <a href="#" class="bg-blue-500 text-white p-3 text-center hover:bg-blue-800 transition-all duration-500">Know More</a>
+    <div
+      class="card-container flex-grow cursor-pointer flex flex-col items-center min-w-[200px] max-w-[400px]"
+    >
+      <div class="card--flipper w-full aspect-[3/4]">
+        <div
+          class="flex flex-col side side--a bg-[var(--color-button)] overflow-hidden"
+        >
+          <Image
+            src={crossfitImage}
+            class="w-full h-full object-cover"
+            alt="@tjegan"
+          />
+          <p
+            class="mt-2 text-center text-lg font-bold text-gray-800 dark:text-gray-100"
+          >
+            Crossfit
+          </p>
+        </div>
+        <div
+          class="side side--b flex flex-col items-center justify-center bg-[var(--color-button)] text-white rounded-2xl"
+        >
+          <p
+            class="px-4 ext-2xl md:text-3xl text-text-offset leading-relaxed font-bold"
+          >
+            Disciplina orientada a la estética muscular: simetría, definición y
+            proporción. Se combinan entrenamiento intenso y dieta controlada
+            para esculpir el cuerpo.
+          </p>
+        </div>
+      </div>
+    </div>
 
-            </div>
+    <div
+      class="card-container flex-grow cursor-pointer flex flex-col items-center min-w-[200px] max-w-[400px]"
+    >
+      <div class="card--flipper w-full aspect-[3/4]">
+        <div
+          class="flex flex-col side side--a bg-[var(--color-button)] overflow-hidden"
+        >
+          <Image
+            src={bodybuilderImage}
+            class="w-full h-full object-cover"
+            alt="@otrouser"
+          />
+          <p
+            class="mt-2 text-center text-lg font-bold text-gray-800 dark:text-gray-100"
+          >
+            BodyBuilder
+          </p>
+        </div>
+        <div
+          class="side side--b flex flex-col items-center justify-center bg-[var(--color-button)] text-white rounded-2xl"
+        >
+          <p
+            class="px-4 text-2xl md:text-3xl text-text-offset leading-relaxed font-bold"
+          >
+            Entrenamiento funcional, variado e intenso que combina fuerza,
+            agilidad y resistencia. Se realiza en comunidad con ejercicios
+            desafiantes y medidos por WODs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<script>
+  document.querySelectorAll(".card-container").forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("flip");
+    });
+  });
+</script>
+
+<style>
+  .card--flipper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+  }
+  .card-container.flip .card--flipper {
+    transform: rotateY(180deg);
+  }
+  .side {
+    backface-visibility: hidden;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 1rem; /* coincide con la imagen */
+  }
+  .side p {
+    margin: 0;
+  }
+  .side--a {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+  .side--b {
+    transform: rotateY(180deg);
+  }
+</style>
